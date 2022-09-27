@@ -67,16 +67,19 @@ var mongodb = require("mongodb");
 var db;
 var start = (new Date()).getTime();
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect(ConnectionUrl, function (err, database) { //process.env.MONGODB_URI
+mongodb.MongoClient.connect(ConnectionUrl, function (err, client) { //process.env.MONGODB_URI
 
 	if (err) {
 	console.log(err);
 	process.exit(1);
 	}
 
-	database.collection(config.collection_user).ensureIndex({ "cart.product.product_id": 1 });
+	db = client.db("ohmyshop");
+
+	db.collection(config.collection_user);
+	// db.collection(config.collection_user).ensureIndex({ "cart.product.product_id": 1 });
 	// Save database object from the callback for reuse.
-	db = database;
+
 	
 	// var authenticate=require('./authentication');
 	// app.use('/authenticate/:uid',authenticate.tokenauthentication(config.collection_seller,db,"seller"));

@@ -15,7 +15,7 @@ module.exports = {
     'collection_shopCategory':'shopCategory',
     'collection_filter':'filter',
     'collection_rating':'rating',
-	'url_server': 'mongodb://heroku_9025ckpg:3iq9cpemvt7sq7qt48eqdhgsmf@ds149040.mlab.com:49040/heroku_9025ckpg',
+	'url_server': 'mongodb+srv://pradeepchandra007:OF3tsM37A9yEGsGQ@cluster0.o64wi.mongodb.net',
 	//'url_server':'mongodb://bhupendra7:ice123age456@ds157248.mlab.com:57248/shoplo', //amazone databse
 	'url_local': 'mongodb://localhost:27017/productsdb'
 };
